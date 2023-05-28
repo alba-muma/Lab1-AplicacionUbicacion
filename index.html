@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ejemplo básico de Leaflet</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <link rel='stylesheet' href='style.css'>
+
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="">
+    </script>
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <img class="titulo" src="Titulo.PNG">
+  <div id="sample_map">
+    <button class="centrar" onclick="centrar()">
+      <svg  xmlns="http://www.w3.org/2000/svg" class="icon-help" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r=".5" fill="currentColor" />
+        <circle cx="12" cy="12" r="7" />
+        <line x1="12" y1="3" x2="12" y2="5" />
+        <line x1="3" y1="12" x2="5" y2="12" />
+        <line x1="12" y1="19" x2="12" y2="21" />
+        <line x1="19" y1="12" x2="21" y2="12" />
+      </svg>
+    </button>
+  
+    <div class="contenedor"> 
+      <label for="nombre">Distancia a la que se activa la alarma: (en metros)</label>
+      <input class="nombre" type="number" id="distancia" name="nombre" placeholder="Introduce la distancia">
+    </div>
+
+    <button onclick="apagarAlarma()" class="apagar">Parar alarma</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js">
+
+  </script>
+
+</body>
+
+</html>
